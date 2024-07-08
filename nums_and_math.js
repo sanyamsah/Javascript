@@ -23,13 +23,13 @@ console.table({
 
 //Maths
 
-// console.log(Math);
-// console.log(Math.abs(-25)); //25
-// console.log(Math.round(4.6)); // 5
-// console.log(Math.ceil(4.5)); // 5
-// console.log(Math.floor(4.5)); // 4
-// console.log(Math.min(1,2,3,4,5)); // 1
-// console.log(Math.max(1,2,3,4,5)); // 5
+console.log(Math);
+console.log(Math.abs(-25)); //25
+console.log(Math.round(4.6)); // 5
+console.log(Math.ceil(4.5)); // 5
+console.log(Math.floor(4.5)); // 4
+console.log(Math.min(1, 2, 3, 4, 5)); // 1
+console.log(Math.max(1, 2, 3, 4, 5)); // 5
 
 console.log(Math.random()); // random number between 0 & 1
 console.log((Math.random() * 10) + 1); // non-zero number, 1 to 10
