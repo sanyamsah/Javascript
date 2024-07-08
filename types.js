@@ -38,7 +38,7 @@ console.log(typeof "a");
 console.log(typeof -0);
 console.log(typeof typeof 12);
 //The answer we get is a string.
-console.log(typeof {"Sanyam":25});
+console.log(typeof { "Sanyam": 25 });
 console.log(typeof undefined);
 console.log(typeof null); //corner case
 console.log(typeof Symbol("Hello"));

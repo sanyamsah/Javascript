@@ -7,7 +7,7 @@ console.log(25 / 2);
 console.log(parseInt(25 / 2));
 console.log(Math.floor(25 / 2));
 console.log(25 % 2);
-console.log(2**4); //Exponentation operator
+console.log(2 ** 4); //Exponentation operator
 console.log("-------------------------")
 
 //Assignment Operators
@@ -51,8 +51,8 @@ console.log("-------------------------")
 //String concatenation
 console.log("Sanyam" + "Sah");
 console.log("Sanyam" + " Sah");
-console.log(5+5+"5"+5+5);
+console.log(5 + 5 + "5" + 5 + 5);
 console.log("-------------------------")
 
 //Ternary Operator
-console.log((2<1)?"Sanyam":"Sah");
+console.log((2 < 1) ? "Sanyam" : "Sah");

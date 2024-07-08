@@ -13,14 +13,14 @@ const demigods = ["Indra", "Agni", "Vayu"]; // array
 console.log(demigods, typeof demigods); // type: object
 console.table(demigods);
 
-let obj ={
-    name : "Sanyam",
-    age : 22
+let obj = {
+    name: "Sanyam",
+    age: 22
 }
 console.log(obj);
 console.table(obj);
 
-const myFunction = function(){
+const myFunction = function () {
     console.log("Hello, World!");
 }
 myFunction(); // type: object function
