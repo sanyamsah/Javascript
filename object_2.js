@@ -22,7 +22,7 @@ const obj_3 = { obj_1, obj_2 };
 console.log(obj_3); // objects inside object
 const obj = Object.assign({}, obj_1, obj_2); // first parameter is the new/modified object
 console.log(obj);
-const obj_4 = {...obj_1, ...obj_2}; // spreading: widely used method
+const obj_4 = {...obj_1, ...obj_2}; // spreading: widely used method // called spread operator in this case
 Object.assign(obj_1, obj_2);
 console.log(obj_1); // new object assigned to obj_1;
 
