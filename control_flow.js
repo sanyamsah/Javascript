@@ -52,7 +52,7 @@ if (loggedInFromGoogle || loggedInWithEmail) {
 
 // switch-case
 const day = 5;
-switch(day){
+switch (day) {
     case 1:
         console.log("Sunday");
         break;

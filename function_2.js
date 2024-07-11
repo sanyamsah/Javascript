@@ -22,9 +22,9 @@ handleObject({
     price: "42"
 });
 
-const myArr = [1,2,3,4,5,6];
-function getSecondValue(arr){
+const myArr = [1, 2, 3, 4, 5, 6];
+function getSecondValue(arr) {
     return arr[1];
 }
 console.log(getSecondValue(myArr));
-console.log(getSecondValue([100,200,300,400,500]));
+console.log(getSecondValue([100, 200, 300, 400, 500]));

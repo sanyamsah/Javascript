@@ -33,7 +33,7 @@ const user = {
     lastLoginDays: ["Saturday", "Sunday"],
     "college name": "KIIT University"
 };
-user.greeting = function(){
+user.greeting = function () {
     console.log(`Hello JS user, ${this.name}!`);
 }
 user.greeting();
