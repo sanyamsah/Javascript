@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Part - 3</title>
+  </head>
+  <body style="background-color: black; color: white"></body>
+  <script>
+    const div = document.createElement("div");
+    console.log(div);
+    div.className = "main";
+    div.id = "id" + Math.round(Math.random() * 100 + 1); // random id's
+    div.setAttribute("title", "div title"); // setting custom attribute; here, title
+    div.style.backgroundColor = "green";
+    div.style.padding = "15px";
+    // div.innerText="Hello, World!";
+    const addText = document.createTextNode("Hello, World!");
+    div.appendChild(addText);
+    document.body.appendChild(addText);
+  </script>
+</html>
