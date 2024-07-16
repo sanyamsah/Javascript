@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Part - 4</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+  </body>
+
+  <script>
+    function addLanguage(langName) {
+      const li = document.createElement("li");
+      li.innerHTML = langName; // `${langName}`;
+      document.querySelector(".language").appendChild(li); // traverses entire tree every time function is called; requires optimization for large projects
+    }
+    addLanguage("Python");
+    addLanguage("Java");
+    function addLanguageOptimized(langName) {
+      const li = document.createElement("li");
+      // const text = document.createTextNode(langName);
+      // li.appendChild(text);
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(li);
+    }
+    addLanguageOptimized("C++");
+    addLanguageOptimized("C");
+
+    // Editing elements
+    const secondLang = document.querySelector("li:nth-child(2)");
+    // console.log(secondLang.innerHTML); // displays in console
+    // secondLang.innerHTML = 'GoLang'; // again, not optimized
+    const newLi = document.createElement("li");
+    newLi.textContent = "GoLang";
+    secondLang.replaceWith(newLi);
+
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = "<li> TypeScript </li>";
+
+    // Removing elements
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+  </script>
+</html>
