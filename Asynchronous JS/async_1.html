@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async JS</title>
+  </head>
+  <body>
+    <h1>Asynchronous Javascript</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    // setTimeout(function(){
+    //     console.log('Hello');
+    // },3000); // prints after 3000 ms
+    const sayHello = function () {
+      console.log("Hello");
+    };
+    setTimeout(sayHello, 3000); // giving reference, not executing
+    const changeText = function () {
+      document.querySelector("h1").innerHTML = "Learning Javascript";
+    };
+    const change = setTimeout(changeText, 5000); // changes heading after 3000 ms (3 seconds)
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearTimeout(change);
+      console.log("Stopped"); // stops the events from happening
+    });
+  </script>
+</html>

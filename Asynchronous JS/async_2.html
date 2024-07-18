@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS - 2</title>
+</head>
+<body>
+    <h1>Asynchronous Javascript - 2</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    // Start button to start, Stop button to stop interval.
+    let intervalId;
+    document.querySelector('#start').addEventListener('click',function(){
+        intervalId = setInterval(function(){
+            console.log('Hello', Date.now().toLocaleString());
+        }, 2000);
+    });
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(intervalId);
+    });
+
+    // Approach 2
+    // const display = function(){
+    //     intervalId = setInterval(function(){
+    //         console.log('Hello', Date.now().toLocaleString());
+    //     },2000);
+    // }
+    // document.querySelector('#start').addEventListener('click',display);
+    // document.querySelector('#stop').addEventListener('click',function(){
+    //     clearInterval(intervalId);
+    // });
+
+    // Approach 3
+    // const sayDate = function(str){
+    //     console.log(str,Date.now().toLocaleString());
+    // }
+    // document.querySelector('#start').addEventListener('click',function(){
+    //     intervalId = setInterval(sayDate,2000,'Hello');
+    // })
+    // document.querySelector('#stop').addEventListener('click',function(){
+    //     clearInterval(intervalId);
+    // })
+
+    
+</script>
+</html>
