@@ -1,0 +1,109 @@
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#constructor -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XMLHttpRequest Ready States</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>XMLHttpRequest Ready States</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>State</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>UNSENT</td>
+          <td>Client has been created. <code>open()</code> not called yet.</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>OPENED</td>
+          <td><code>open()</code> has been called.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>HEADERS_RECEIVED</td>
+          <td>
+            <code>send()</code> has been called, and headers and status are
+            available.
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>LOADING</td>
+          <td>Downloading; <code>responseText</code> holds partial data.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>DONE</td>
+          <td>The operation is complete.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="card">
+      <!-- <h2 id="login"></h2> -->
+      <img src="" alt="" />
+      <span id="name"></span>
+      <span id="followers"></span>
+    </div>
+  </body>
+  <script>
+    const requestUrl = "https://api.github.com/users/sanyamsah";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", requestUrl);
+    console.log("Executed Open");
+    xhr.onreadystatechange = function () {
+      console.log(xhr.readyState);
+      if (xhr.readyState === 4) {
+        // console.log(this.responseText);
+        // const data = this.responseText;
+        // console.log(data.followers);
+        // console.log(typeof data); // response text is string
+        const data = JSON.parse(this.responseText); // converts string to JSON
+        console.log(typeof data);
+        console.log(data);
+        console.log(`Followers: ${data.followers}`);
+        console.log(data.login);
+        const login = document.createElement('h2');
+        login.innerHTML=data.login;
+        const card = document.getElementById('card');
+        card.appendChild(login);
+      }
+    }
+    xhr.send();
+    // console.log() is a debugger/developer tool for browser
+    
+  </script>
+</html>
