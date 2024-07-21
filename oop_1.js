@@ -18,7 +18,7 @@ function setUser(username, loginCount, signedIn) {
     this.username = username;
     this.loginCount = loginCount;
     this.signedIn = signedIn;
-    this.greeting=function(){
+    this.greeting = function () {
         console.log(`Welcome, user ${this.username}!`);
     }
     // return this; // implicitly defined for 'new' keyword
